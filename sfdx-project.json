@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "demo",
+      "default": true
+    }
+  ],
+  "name": "czd-lighntning-datatable",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "55.0"
+}

@@ -1,0 +1,25 @@
+minimum_cumulusci_version: "3.57.0"
+project:
+  name: czd-lightning-datatable
+  package:
+    name: czd-lightning-datatable
+    api_version: "55.0"
+  git:
+    default_branch: "main"
+  source_format: sfdx
+
+tasks:
+  robot:
+    options:
+      suites: robot/cumulusci-on-circleci/tests
+      xunit: test-result-junit.xml
+      vars: BROWSER:headlessfirefox
+      # Enables multi threading via pabot
+      # processes: 2
+      options:
+        outputdir: robot/cumulusci-on-circleci/results
+
+  robot_testdoc:
+    options:
+      path: robot/cumulusci-on-circleci/tests
+      output: robot/cumulusci-on-circleci/doc/cumulusci-on-circleci_tests.html

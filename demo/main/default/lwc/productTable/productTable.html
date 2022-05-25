@@ -1,0 +1,23 @@
+<template>
+  <div style="background-color: white; height: 600px">
+    <lightning-input
+      type="number"
+      label="Row Limit"
+      value={rowLimit}
+      onchange={onRowLimitChange}
+    ></lightning-input>
+    <template if:true={wiredProducts.data}>
+      <lightning-datatable
+        key-field="Id"
+        data={wiredProducts.data}
+        columns={columns}
+        onrowselection={onRowSelection}
+        column-widths-mode="auto"
+        render-mode="role-based"
+        render-config={renderConfig}
+      >
+      </lightning-datatable>
+    </template>
+    <template if:true={wiredProducts.error}> ERROR ! Check logs </template>
+  </div>
+</template>

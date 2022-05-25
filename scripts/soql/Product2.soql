@@ -1,0 +1,2 @@
+
+SELECT Id, Name, Description, ActiveUntilDate__c FROM PRODUCT2
