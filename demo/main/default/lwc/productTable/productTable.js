@@ -14,12 +14,7 @@ export default class ProductTable extends LightningElement {
 
   columns = COLUMNS;
 
-  rowLimit = 50000;
-
-  renderConfig = {
-    virtualize: "vertical"
-    // additional customization
-  };
+  rowLimit = 200;
 
   onRowLimitChange(event) {
     this.rowLimit = event.target.value;
@@ -27,6 +22,6 @@ export default class ProductTable extends LightningElement {
 
   onRowSelection(event) {
     const selectedRows = event.target.selectedRows;
-    alert(selectedRows);
+    //alert(selectedRows);
   }
 }
